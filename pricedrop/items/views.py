@@ -1,7 +1,7 @@
 from django.shortcuts import render
+from rest_framework import generics
 from items.models import Item
 from items.serializers import ItemSerializer
-from rest_framework import generics
 
 class ItemListCreate(generics.ListCreateAPIView):
     queryset = Item.objects.all()
