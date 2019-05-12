@@ -1,0 +1,14 @@
+[
+    {
+        "model": "items.item",
+        "pk": 6,
+        "fields": {
+            "name": "Armin",
+            "url": "something@gmail.com",
+            "original_price": "123",
+            "current_price": "123",
+            "date_added" : "2019-01-01",
+            "price_div" : "default"
+        }
+    }
+]
