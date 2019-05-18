@@ -1,12 +1,14 @@
 {
-  "name": "PriceDrop",
+  "name": "pricedrop",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development ./pricedrop/frontend/src/index.js --output ./pricedrop/frontend/static/frontend/main.js",
-    "build": "webpack --mode production ./pricedrop/frontend/src/index.js --output ./pricedrop/frontend/static/frontend/main.js"
+    "build": "webpack --mode production ./pricedrop/frontend/src/index.js --output ./pricedrop/frontend/static/frontend/main.js",
+    "flush": "pipenv run python ./pricedrop/manage.py flush --no-input",
+    "e2e": "cypress open --project ./pricedrop/frontend/"
   },
   "repository": {
     "type": "git",
@@ -25,9 +27,11 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "cypress": "^3.3.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "weak-key": "^1.0.1",
     "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2"
   }
